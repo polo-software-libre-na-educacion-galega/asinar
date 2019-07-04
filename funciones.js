@@ -2,6 +2,7 @@ $(document).ready(function(){
 	
 	$("#alertaErros").hide();
 	$('#infoasinado').hide();
+	
 	$(".boton_envio").click(function(e) {
 		
 		e.stopPropagation();
