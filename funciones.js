@@ -39,6 +39,11 @@ $(document).ready(function(){
 			$("#div_id_email").addClass("has-error");
 		}
 		 
+		 if ( !validacion_email.test(email)) {
+			mensaxevalidacion =mensaxevalidacion+"<li> <b> Error!!</b> O  email non é correcto </li>";
+			$("#div_id_email").addClass("has-error");
+		}
+		
 		if (mensaxevalidacion!=""){
 			$("#alertaErros").html(mensaxevalidacion);
 			$("#alertaErros").show();
