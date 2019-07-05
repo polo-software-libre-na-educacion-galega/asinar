@@ -1,4 +1,6 @@
 <?php
+require 'config.php';
+
 // Guardar los datos recibidos en variables:
 $tipo = $_POST['tipo'];
 $nome = $_POST['nome'];
@@ -9,13 +11,8 @@ $concello=$_POST['concello'];
 
 
  
- 
- 
- //Conexion e inserción BD  
-$servername = "localhost";
-$database = "manifesto";
-$username = "root";
-$password = "";
+// echo $esquema '<br>';
+
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 if (!$conn) {
@@ -23,7 +20,7 @@ if (!$conn) {
 }
 
 
- $sql = "INSERT INTO manifesto.asinantes ( tipo, nome, apelidos, email, profesion, concello) VALUES( '$tipo', '$nome', '$apelidos', '$email', '$profesion', '$concello') ";
+ $sql = "INSERT INTO  asinantes ( tipo, nome, apelidos, email, profesion, concello) VALUES( '$tipo', '$nome', '$apelidos', '$email', '$profesion', '$concello') ";
 
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";

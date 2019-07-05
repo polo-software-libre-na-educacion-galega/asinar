@@ -1,9 +1,5 @@
 <?php
-//Conexion e inserción BD  
-$servername = "localhost";
-$database = "manifesto";
-$username = "root";
-$password = "";
+ require 'config.php';
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
